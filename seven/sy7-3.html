@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>实验7-3</title>
+	<style>
+		body{
+			background: url("images/beijing.jpg")no-repeat top center;
+			padding: 50px 0 0 860px;
+			height: 700px;
+		}
+		#about{
+			width: 330px;
+			height: 400px;
+			border-radius: 15px;
+		}
+		form{
+			width: 248px;
+			height: 320px;
+			background-color: #F7EAE8;
+			padding: 30px 40px;
+			border: 1px solid #F5EAE8;
+			border-radius: 15px;
+		}
+		input{
+			display: block;
+		}
+		[type="text"]{
+			width: 250px;
+			height: 38px;
+			border: 1px solid #CCC;
+			margin-bottom: 30px;
+			font-size: 16px;
+			text-indent: 50px;
+		}
+		[type="password"]{
+			width: 250px;
+			height: 38px;
+			border: 1px solid #CCC;
+			margin-bottom: 10px;
+			font-size: 16px;
+			text-indent: 50px;
+		}
+		[type="text"]{
+			background: url("images/zhanghao.jpg")no-repeat 0 -2px;
+		}
+		[type="password"]{
+			background: url("images/mima.jpg")no-repeat 0 -2px;
+		}
+		[type="checkbox"]{
+			display: inline;
+			vertical-align: middle;
+		}
+		[type="radio"]{
+			display: inline;
+			vertical-align: middle;
+		}
+		label{
+			font-size: 12px;
+		}
+		.reg{
+			text-align: center;
+			font-size: 12px;
+			margin-top: -18px;
+		}
+		.reg a{
+			color: #999;
+			text-decoration: underline;
+		}
+		.reg a:hover{
+			color:#F00;
+			text-decoration: underline;
+		}
+		[type="submit"]{
+			width: 255px;
+			height: 44px;
+			margin: 25px auto;
+			background-image: url("images/but.jpg");
+			border: none;
+		}
+		.related{
+			width: 255px;
+			height: 40px;
+			background-color: #F7EAE8;
+			padding-top: 20px;
+			text-align: center;
+			font-size: 14px;
+		}
+		h3{
+			margin: 5px;
+			font-size: 25px;
+			font-weight: 50px;
+			font-family: "黑体";
+			text-align: center;
+			color: #061E2D;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="about">
+		<h3>用户登录</h3>
+		<form action="#" method="post" name="form">
+		<input type="text" name="user" placeholder="用户名/手机号/邮箱地址">
+		<input type="password" name="password" placeholder="填写密码">
+		<input type="radio" name="yonghu" value="初级" id="chuji"><label for="chuji">初级</label>
+		<input type="radio" name="yonghu" value="中级" id="zhongji"><label for="zhongji">中级</label>
+		<input type="radio" name="yonghu" value="高级" id="gaoji"><label for="gaoji">高级</label>
+		<input type="radio" name="yonghu" value="访客" id="fangke"><label for="gaoji">访客</label>
+		</br>
+		<input type="checkbox" name="account" value="1" id="account">
+		<label for="account">记住账号</label>
+		<div class="reg">
+			<a href="#">欢迎注册</a>
+			<a href="#">忘记密码</a>
+		</div>
+		<input type="submit" name="submit" value="">
+		<div class="related">
+		合作网站账号登陆：
+		<a href="#"><img src="images/weixin (2).png" alt=""></a>
+		<a href="#"><img src="images/qqlogin.png" alt=""></a>
+	</div>
+	</form>
+	</div>
+</body>
+</html>

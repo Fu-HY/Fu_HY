@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片切换</title>
+	<style>
+		*{margin: 0;pading:0;}
+		li{list-style: none;}
+		i{font-style: normal;}
+		#wrap{
+			position:relative;
+			width:600px;
+			height:400px;
+			margin:50px auto;
+		}
+		.title,.num{
+			position: relative;
+			width:100%;
+			left: 0;
+			line-height: 30px;
+			text-align: center;
+			z-index: 99;
+			color:#FFF;
+			background-color: rgba(0,0,0,.5);
+		}
+		.num{
+			top:0;
+		}
+		.title{
+			top:340px;
+			bottom:0;
+		}
+		ul li{
+			position:absolute;
+			display: none;
+			top:0;
+			left:0;
+			width:100%;
+			height:400px;
+		}
+		ul li.on{
+			display:block;
+		}
+		ul li img{
+			width:100%;
+			height:100%;
+			overflow: hidden;
+		}
+		.btn span{
+			position:absolute;
+			padding: 15px 10px;
+			color: #FFF;
+			top:50%;
+			background-color: rgba(0,0,0,.5);
+			cursor: pointer;
+		}
+		.btn .left{
+			left:0;
+		}
+		.btn .right{
+			right:0;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="num">第<i>一</i>张图片</div>
+		<ul>
+			<li class="on"><img src="img/1.jpg" alt=""></li>
+			<li><img src="img/2.jpg" alt=""></li>
+			<li><img src="img/3.jpg" alt=""></li>
+			<li><img src="img/4.jpg" alt=""></li>
+			<li><img src="img/5.jpg" alt=""></li>
+			<li><img src="img/6.jpg" alt=""></li>
+			<li><img src="img/7.jpg" alt=""></li>
+			<li><img src="img/8.jpg" alt=""></li>
+			<li><img src="img/9.jpg" alt=""></li>
+			<li><img src="img/10.jpg" alt=""></li>
+		</ul>
+		<div class="btn">
+			<span class="left">&lt;</span>
+			<span class="right">&gt;</span>
+		</div>
+		<div class="title">日出</div>
+	</div>
+	<script>
+		var ali = document.getElementsByTagName("li");
+		var aspan = document.getElementsByTagName("span");
+		var otitle = document.getElementsByClassName("title")[0];
+		var oi = document.getElementsByTagName("i")[0];
+		var i=0,arr1 = ["一","二","三","四","五","六","七","八","九","十"],arr2=["日出","微笑","篮球","树","眺望","彩虹楼","别墅","落日","夜晚","窗外"];
+		aspan[1].onclick = function(){
+			ali[i].className="";
+			i++;
+			if(i>=ali.length){i=0;}
+			ali[i].className="on";
+			oi.innerHTML = arr1[i];
+			otitle.innerHTML = arr2[i];
+		}
+		aspan[0].onclick = function(){
+			ali[i].className="";
+			i--;
+			if(i<0){i=ali.length-1;}
+			ali[i].className="on";
+			oi.innerHTML = arr1[i];
+			otitle.innerHTML = arr2[i];
+		}
+	</script>
+</body>
+</html>
